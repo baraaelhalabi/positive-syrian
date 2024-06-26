@@ -1,0 +1,172 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+
+  /* padding: 0 15rem; */
+
+  box-sizing: border-box;
+}
+
+.title {
+  color: white;
+
+  /* margin: 0; */
+}
+
+.title .dash {
+  width: 30px;
+  height: 2px;
+
+  background-color: white;
+}
+
+.panel {
+  background-color: #081c43;
+  padding: 1.5rem 3rem;
+
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+
+  width: 80%;
+}
+
+.panel p {
+  margin: 0;
+  font-size: 2rem;
+  color: white;
+}
+
+.container {
+  width: 100%;
+
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+
+  padding: 0 5rem;
+
+  box-sizing: border-box;
+}
+
+.container .form, .container .hero {
+  flex: 1;
+
+  position: relative;
+}
+
+.container .form form {
+  position: absolute;
+  inset: 0;
+  left: -1rem;
+  right: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .form form h2, .container .form form p {
+  margin: 0;
+  color: white;
+}
+
+form h2 {
+  font-size: 2rem;
+}
+
+form p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+
+form input {
+  border: none;
+  
+  border-radius: 0.5rem;
+
+  height: 2rem;
+  flex: 1;
+  min-width: none;
+  /* width: 250px; */
+}
+
+form button {
+  background: url('./button.svg');
+  background-repeat: none;
+  background-size: cover;
+  background-color: transparent;
+
+  border: none;
+
+  aspect-ratio: 2.54098361 / 1;
+  width: 160px;
+}
+
+.container .form form div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin: 1.5rem 0;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.socials a {
+  font-size: 2rem;
+  background-color: #081c43;
+  color: white;
+
+  width: 50px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .form, .hero {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .form h2 {
+    font-size: 1.5rem;
+  }
+
+  .form p {
+    font-size: 1rem;
+  }
+}
