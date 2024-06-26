@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/positive-syrian/static/css/main.d3311117.css",
+    "main.js": "/positive-syrian/static/js/main.ac4ff3d2.js",
+    "static/js/453.0bebd645.chunk.js": "/positive-syrian/static/js/453.0bebd645.chunk.js",
+    "static/media/hero.svg": "/positive-syrian/static/media/hero.419c56359834008183970d33bc3f8594.svg",
+    "static/media/button.svg": "/positive-syrian/static/media/button.4bc9b83145f7e815c154.svg",
+    "static/media/frame.svg": "/positive-syrian/static/media/frame.376a48c8f191cecbd906c579feacb467.svg",
+    "index.html": "/positive-syrian/index.html",
+    "main.d3311117.css.map": "/positive-syrian/static/css/main.d3311117.css.map",
+    "main.ac4ff3d2.js.map": "/positive-syrian/static/js/main.ac4ff3d2.js.map",
+    "453.0bebd645.chunk.js.map": "/positive-syrian/static/js/453.0bebd645.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3311117.css",
+    "static/js/main.ac4ff3d2.js"
+  ]
+}
