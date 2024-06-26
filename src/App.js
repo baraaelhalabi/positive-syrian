@@ -7,12 +7,13 @@ import FlipCounter from './components/Counter';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const apiUrl = 'http://127.0.1:8080/api';
+  // const apiUrl = 'http://127.0.1:8080/api';
+  const apiUrl = 'https://positive-syrian-backend-ao0p5i1jx-baraaelhalabis-projects.vercel.app/api';
 
   let [count, setCount] = useState(0);
   useEffect(() => {
     fetch(`${apiUrl}/count`).then(res => {
-      if(res.status == 200)
+      if(res.status === 200)
         res.json().then(result => {
           setCount(result.count);
       }).catch(err => {
@@ -34,7 +35,7 @@ function App() {
       }
     }).then(res => {
       console.log(res);
-      if(res.status == 200) {
+      if(res.status === 200) {
         setCount(++count);
       }
     }).catch(err => {
