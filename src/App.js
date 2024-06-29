@@ -4,11 +4,11 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import FlipCounter from './components/Counter';
+import QuotePanel from './components/QuotePanel';
 import { useEffect, useState } from 'react';
 
 function App() {
-  // const apiUrl = 'http://127.0.1:8080/api';
-  const apiUrl = 'https://positive-syrian-backend-ao0p5i1jx-baraaelhalabis-projects.vercel.app/api';
+  const apiUrl = 'https://positive-syrian-backend.vercel.app/api';
 
   let [count, setCount] = useState(0);
   useEffect(() => {
@@ -47,7 +47,8 @@ function App() {
     <div className='wrapper'>
       <h1 className='title'><span className='dash'></span>Positive Syrian Official Web Page الموقع الرسمي لحملة سوري ايجابي<span className='dash'></span></h1>
       <div className='panel'>
-        <p>[GIF PANEL]</p>
+        <QuotePanel />
+        {/* <p>[GIF PANEL]</p> */}
       </div>
       <FlipCounter count={count} />
       <div className='container'>
@@ -80,7 +81,7 @@ function App() {
             <FontAwesomeIcon icon={faWhatsapp} />
           </a>
         </div>
-        <p>© 2022 Positive Syrian. All rights reserved.</p>
+        <p>© 2024 Positive Syrian. All rights reserved.</p>
       </footer>
     </div>
   );
