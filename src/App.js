@@ -6,11 +6,14 @@ import { faFacebookF, faInstagram, faWhatsapp } from '@fortawesome/free-brands-s
 import FlipCounter from './components/Counter';
 import QuotePanel from './components/QuotePanel';
 import { useEffect, useState } from 'react';
+import { Toaster, toast } from 'sonner';
 
 function App() {
   const apiUrl = 'https://positive-syrian-backend.vercel.app/api';
 
   let [count, setCount] = useState(0);
+  let [name, setName] = useState('');
+
   useEffect(() => {
     fetch(`${apiUrl}/count`).then(res => {
       if(res.status === 200)
@@ -25,7 +28,6 @@ function App() {
   }, []);
 
   const handleSubmit = (e) => {
-    setCount(++count);
     e.preventDefault();
 
     fetch(`${apiUrl}/increase-count`, {
@@ -36,15 +38,23 @@ function App() {
     }).then(res => {
       console.log(res);
       if(res.status === 200) {
+        toast.success('+ شكراً لاهتمامك');
         setCount(++count);
       }
     }).catch(err => {
       console.error(err);
     });
+
+    setName('');
+  }
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
   }
 
   return (
     <div className='wrapper'>
+      <Toaster richColors />
       <h1 className='title'><span className='dash'></span>Positive Syrian Official Web Page الموقع الرسمي لحملة سوري ايجابي<span className='dash'></span></h1>
       <div className='panel'>
         <QuotePanel />
@@ -59,7 +69,7 @@ function App() {
             <h2>انا سوري ايجابي</h2>
             <div className='input'>
               <p>Name:</p>
-              <input required type='text' />
+              <input required type='text' value={name} onChange={handleNameChange} />
               <p>:اسمي</p>
             </div>
             <button></button>
@@ -71,7 +81,7 @@ function App() {
       </div>
       <footer>
         <div className='socials'>
-          <a href='https://www.facebook.com/profile.php?id=61561103955785'>
+          <a href='https://www.facebook.com/profile.php?id=61561339174252&mibextid=ZbWKwL'>
             <FontAwesomeIcon icon={faFacebookF} />
           </a>
           <a href='https://www.instagram.com/positivesyrian/'>
